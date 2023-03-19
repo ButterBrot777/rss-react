@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Card from '../interfaces/Card.interface';
 
 class Header extends Component {
@@ -6,18 +7,25 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      cards: [
-        { id: 1, title: 'First', description: 'card 1' },
-        { id: 2, title: 'Second', description: 'card 2' },
-      ],
+      location: '',
     };
+  }
+
+  getLocation() {
+    return {
+      location: this.props.location,
+    };
+  }
+
+  handleClick() {
+    const location = useLocation();
   }
 
   render() {
     return (
       <div className="flex w-screen h-[80px] bg-yellow-200 text-black justify-around items-center">
-        <h2>About us</h2>
-        <h2>Home</h2>
+        <Link to="/home">Home</Link>
+        <Link to="/about">About us</Link>
         <h2>Current page:</h2>
       </div>
     );

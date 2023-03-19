@@ -29,7 +29,7 @@ class Input extends React.Component<unknown, { value: string }> {
     const { value } = this.state;
     return (
       <input
-        className="bg-white text-black"
+        className="bg-white text-black p-1"
         type="text"
         name="mainInput"
         value={value}

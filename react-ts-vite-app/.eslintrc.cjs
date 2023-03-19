@@ -26,6 +26,7 @@ module.exports = {
   "rules": {
     "react/react-in-jsx-scope": 0,
     "react/prefer-stateless-function": 0,
-    "@typescript-eslint/no-useless-constructor": 0
+    "@typescript-eslint/no-useless-constructor": 0,
+    "import/no-extraneous-dependencies": 0
   }
 }
