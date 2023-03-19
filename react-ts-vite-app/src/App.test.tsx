@@ -6,7 +6,6 @@ import App from './App';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import CardList from './components/CardList';
-import Card from './components/Card';
 
 describe('App', () => {
   it('should render hello world', () => {

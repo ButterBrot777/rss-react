@@ -1,4 +1,3 @@
-import React, { ReactElement } from 'react';
 import AboutUs from '../pages/AboutUs';
 import Home from '../pages/Home';
 import RouteBuilder from '../interfaces/Route.interface';
