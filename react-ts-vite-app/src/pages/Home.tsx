@@ -5,10 +5,10 @@ import CardList from '../components/CardList';
 class Home extends Component {
   render() {
     return (
-      <div className="bg-red-500 w-max flex flex-col items-center w-screen">
-        <p className="text-amber-400">Hello World!</p>
+      <div className="bg-red-500 flex flex-col items-center w-screen h-[calc(100vh-80px)]">
+        <h1 className="text-amber-400">Hello World!</h1>
 
-        <Input />
+        <Input aria-label="main-input" />
 
         <CardList />
       </div>
