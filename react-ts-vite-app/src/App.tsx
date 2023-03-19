@@ -2,21 +2,20 @@ import React from 'react';
 
 import './App.css';
 
+import Input from './components/Input';
+import Header from './components/Header';
+
 class App extends React.Component {
   render() {
     return (
-      <>
-        <div className="some-name">
-          <p>Hello World!</p>
+      <div className="container flex flex-col w-screen m-auto items-center">
+        <Header />
+        <div className="bg-red-500 w-max">
+          <p className="text-amber-400">Hello World!</p>
+
+          <Input />
         </div>
-        <form action="">
-          <input
-            className="some-name"
-            id="dinosaur_name"
-            aria-describedby="dinosaur_namespace"
-          />
-        </form>
-      </>
+      </div>
     );
   }
 }
