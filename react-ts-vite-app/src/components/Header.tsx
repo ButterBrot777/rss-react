@@ -1,32 +1,27 @@
 import React, { Component } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import Card from '../interfaces/Card.interface';
+import { Link } from 'react-router-dom';
 
-class Header extends Component {
+class Header extends Component<unknown, { location: string }> {
   constructor(props) {
     super(props);
 
     this.state = {
-      location: '',
+      location: localStorage.getItem('location') ?? 'home',
     };
-  }
-
-  getLocation() {
-    return {
-      location: this.props.location,
-    };
-  }
-
-  handleClick() {
-    const location = useLocation();
   }
 
   render() {
+    const { location } = this.state;
+
     return (
       <div className="flex w-screen h-[80px] bg-yellow-200 text-black justify-around items-center">
-        <Link to="/home">Home</Link>
-        <Link to="/about">About us</Link>
-        <h2>Current page:</h2>
+        <Link to="/home" onClick={() => this.setState({ location: 'home' })}>
+          Home
+        </Link>
+        <Link to="/about" onClick={() => this.setState({ location: 'about' })}>
+          About us
+        </Link>
+        <h2>Current page: {location}</h2>
       </div>
     );
   }
