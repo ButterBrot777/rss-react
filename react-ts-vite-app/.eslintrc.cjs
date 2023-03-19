@@ -8,7 +8,8 @@ module.exports = {
     "airbnb-typescript",
     "airbnb/hooks",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -19,7 +20,11 @@ module.exports = {
   },
   "plugins": [
     "react",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
-  "rules": {}
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/prefer-stateless-function": 0
+  }
 }
